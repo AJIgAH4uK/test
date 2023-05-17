@@ -5,16 +5,17 @@
             <div class="content-center">
                 <div class="columns">
                     <div class="copyright_block">
-                        <div class="name">Gefest Logistic</div>
+                        <div class="name"><? $APPLICATION->IncludeFile(SITE_DIR . "include_areas/logo.php", [], ["NAME" => "Лого"]) ?></div>
                         <div class="copy">
-                            <p>&copy;&nbsp;2015 Гефест Логистик</p>
-                            <p>Копирование материала разрешено только со&nbsp;ссылкой на&nbsp;этот сайт</p>
+                            <? $APPLICATION->IncludeFile(SITE_DIR . "include_areas/copyright.php", [], ["NAME" => "Копирайт"]) ?>
                         </div>
                     </div>
                     <div class="phone_block">
                         <div class="phone">
                             <a onclick="location.href = 'tel:'+$(this).text().replace(/(\s|\(|\)|\-)/g,'')+'';" href="#">
-                                <span>+7 (495) 23-21-091</span>
+                                <span>
+                                    <? $APPLICATION->IncludeFile(SITE_DIR . "include_areas/phone.php", [], ["NAME" => "Телефон"]) ?>
+                                </span>
                             </a>
                         </div>
                         <div class="footer-form">

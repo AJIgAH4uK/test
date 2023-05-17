@@ -37,19 +37,20 @@ use Bitrix\Main\Page\Asset;
     <![endif]-->
 </head>
 <body>
-    <?$APPLICATION->ShowPanel()?>
     <div class="container">
         <header>
             <div class="header-bottom">
                 <div class="content-center">
                     <div class="columns">
                         <div class="header-logo">
-                            Gefest Logistic
+                            <? $APPLICATION->IncludeFile(SITE_DIR . "include_areas/logo.php", [], ["NAME" => "Лого"]) ?>
                         </div>
                         <div class="header-phone">
                             <a onclick="location.href = 'tel:'+$(this).text().replace(/(\s|\(|\)|\-)/g,'')+'';"
                                href="#">
-                                <span>+7 (495) 23-21-091</span>
+                                <span>
+                                    <? $APPLICATION->IncludeFile(SITE_DIR . "include_areas/phone.php", [], ["NAME" => "Телефон"]) ?>
+                                </span>
                             </a>
                         </div>
                         <div class="header-form">
@@ -59,3 +60,4 @@ use Bitrix\Main\Page\Asset;
                 </div>
             </div>
         </header>
+        <?$APPLICATION->ShowPanel()?>
