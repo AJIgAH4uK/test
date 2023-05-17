@@ -18,7 +18,7 @@ use Bitrix\Main\Page\Asset;
     <link rel="stylesheet" href="" type="text/css" media="screen" />
     <? Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . "/assets/js/fancybox/jquery.fancybox.css"); ?>
     <? Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . "/assets/css/global.css"); ?>
-    <? Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . "css/print.css"); ?>
+    <? Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . "/assets/css/print.css"); ?>
     <? Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . "/assets/css/jquery.bxslider.css"); ?>
     <? Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . "/assets/js/fancybox/jquery.fancybox.pack.js"); ?>
     <? Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . "/assets/js/fancybox/jquery.mousewheel-3.0.6.pack.js"); ?>
