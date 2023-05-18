@@ -14,9 +14,7 @@ $this->setFrameMode(true);
 ?>
 <section class="partners">
     <div class="content-center">
-        <div class="block-title h1">
-            <?=$arResult['NAME']?>
-        </div>
+        <div class="block-title h1"><?=$arResult['NAME']?></div>
         <div class="slider-wrapper">
             <div class="slider">
                 <div class="slides bxslider">
@@ -27,14 +25,14 @@ $this->setFrameMode(true);
                             $this->AddEditAction($arItem['ID'], $arItem['EDIT_LINK'], CIBlock::GetArrayByID($arItem["IBLOCK_ID"], "ELEMENT_EDIT"));
                             $this->AddDeleteAction($arItem['ID'], $arItem['DELETE_LINK'], CIBlock::GetArrayByID($arItem["IBLOCK_ID"], "ELEMENT_DELETE"), array("CONFIRM" => GetMessage('CT_BNL_ELEMENT_DELETE_CONFIRM')));
                             ?>
-                                <div class="partner-item">
+                                <div class="partner-item" id="<?= $this->GetEditAreaId($arItem['ID']); ?>">
                                 <div class="pse-table">
-                                    <div class="pse-table-cell" id="<?= $this->GetEditAreaId($arItem['ID']); ?>">
-                                        <img src="<?=$arItem['PREVIEW_PICTURE']['SRC']?>"/>
+                                    <div class="pse-table-cell">
+                                        <img src="<?=$arItem['PREVIEW_PICTURE']['SRC']?>" alt="<?=$arItem['PREVIEW_PICTURE']['ALT']?>" />
                                     </div>
                                 </div>
-                            </div>
-                            <? endforeach?>
+                            </div >
+                            <?endforeach?>
                         </div>
                     </div>
                 </div>
@@ -45,14 +43,14 @@ $this->setFrameMode(true);
                         $this->AddEditAction($arItem['ID'], $arItem['EDIT_LINK'], CIBlock::GetArrayByID($arItem["IBLOCK_ID"], "ELEMENT_EDIT"));
                         $this->AddDeleteAction($arItem['ID'], $arItem['DELETE_LINK'], CIBlock::GetArrayByID($arItem["IBLOCK_ID"], "ELEMENT_DELETE"), array("CONFIRM" => GetMessage('CT_BNL_ELEMENT_DELETE_CONFIRM')));
                         ?>
-                            <div class="partner-item">
+                        <div class="partner-item" id="<?= $this->GetEditAreaId($arItem['ID']); ?>">
                             <div class="pse-table">
                                 <div class="pse-table-cell">
-                                    <img src="<?=$arItem['PREVIEW_PICTURE']['SRC']?>"/>
+                                    <img src="<?=$arItem['PREVIEW_PICTURE']['SRC']?>" alt="<?=$arItem['PREVIEW_PICTURE']['ALT']?>" />
                                 </div>
                             </div>
                         </div>
-                        <? endforeach?>
+                        <?endforeach?>
                     </div>
                 </div>
             </div>

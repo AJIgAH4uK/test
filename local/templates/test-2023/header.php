@@ -15,7 +15,6 @@ use Bitrix\Main\Page\Asset;
     <meta name="cmsmagazine" content="7a07349553113a03d820998046df0929" />
     <? Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . "/assets/js/jquery-1.10.2.min.js"); ?>
     <!-- Add fancyBox -->
-    <link rel="stylesheet" href="" type="text/css" media="screen" />
     <? Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . "/assets/js/fancybox/jquery.fancybox.css"); ?>
     <? Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . "/assets/css/global.css"); ?>
     <? Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . "/assets/css/print.css"); ?>
@@ -28,12 +27,13 @@ use Bitrix\Main\Page\Asset;
     <? Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . "/assets/js/jquery.form.min.js"); ?>
     <? Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . "/assets/js/jquery.maskedinput.js"); ?>
     <? Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . "/assets/js/global.js"); ?>
+    <? Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . "/assets/js/script.js"); ?>
     <? Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . "/assets/js/modernizr.custom.77745.js"); ?>
     <? Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . "/assets/js/jquery.placeholder.js"); ?>
     <? Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . "/assets/js/retina.js"); ?>
     <!--[if lt IE 9]>
-    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <? Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . "/assets/js/html5shiv.js"); ?>
+    <? Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . "/assets/js/respond.min.js"); ?>
     <![endif]-->
 </head>
 <body>
