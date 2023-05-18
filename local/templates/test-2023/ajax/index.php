@@ -13,9 +13,7 @@ if($_REQUEST['EMAIL'] == "" and !in_array($_REQUEST['FORM_ID'], array('callback-
 if(count($errors) > 0){
     $json_ar = array('status' => 'error', 'form_id' => $_REQUEST['FORM_ID'], 'errors' => $errors);
 }else {
-
     $to = "info@gefestlogistic.ru";
-
     $subject = "Gefest Logistic: ".$_REQUEST['FORM_NAME'];
 
     /* сообщение */
@@ -46,8 +44,6 @@ if(count($errors) > 0){
                     '.$_REQUEST['TIME'].'</p>
                     </div>';
     }
-
-
     $headers= "MIME-Version: 1.0\r\n";
     $headers .= "Content-type: text/html; charset=iso-8859-1\r\n";
     $headers .= "From: feedback@gefestlogistic.ru\r\n";
