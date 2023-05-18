@@ -16,13 +16,15 @@ $this->setFrameMode(true);
     <div class="content-center">
         <div class="columns">
             <div class="column right">
-                <div class="title">Надежность</div>
+                <div class="title"><?=$arResult['NAME']?></div>
                 <ul>
-                    <li>Мы&nbsp;работаем таможенными брокерами больше 15&nbsp;лет.</li>
-                    <li>Мы&nbsp;адекватно оцениваем риски задержек и&nbsp;прописываем
-                        их&nbsp;в&nbsp;контракте.
-                    </li>
-                    <li>За&nbsp;это время мы&nbsp;доставили тысячи грузов.</li>
+                    <? foreach ($arResult['ITEMS'] as $arItem):?>
+                    <?
+                    $this->AddEditAction($arItem['ID'], $arItem['EDIT_LINK'], CIBlock::GetArrayByID($arItem["IBLOCK_ID"], "ELEMENT_EDIT"));
+                    $this->AddDeleteAction($arItem['ID'], $arItem['DELETE_LINK'], CIBlock::GetArrayByID($arItem["IBLOCK_ID"], "ELEMENT_DELETE"), array("CONFIRM" => GetMessage('CT_BNL_ELEMENT_DELETE_CONFIRM')));
+                    ?>
+                    <li id="<?= $this->GetEditAreaId($arItem['ID']); ?>"><?=$arItem['NAME']?></li>
+                    <? endforeach?>
                 </ul>
             </div>
         </div>
