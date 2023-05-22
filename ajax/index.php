@@ -60,7 +60,7 @@ if(count($errors) > 0){
     if (isset($_POST['action']) && $_POST['action'] == 'call'){
         $TITLE = 'Новая заявка звонка с сайта: '.$PROP['PERSON_NAME'].' от '.date("d.m.Y H:i:s");
     } else {
-        $TITLE = 'Новая заявка: '.$PROP['PERSON_NAME'].' от '.date("d.m.Y H:i:s");
+        $TITLE = 'Новая заявка: '.$PROP['NAME'].' от '.date("d.m.Y H:i:s");
     }
 
     $el = new CIBlockElement;
